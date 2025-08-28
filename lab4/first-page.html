@@ -3,72 +3,198 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome to Cozy Cup Café</title>
+  <title>Minimal Café</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') no-repeat center center fixed;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      color: #333;
+      background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
+      min-height: 100vh;
     }
 
     .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      height: 100vh;
+      background-color: rgba(255, 255, 255, 0.85);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    nav {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    nav .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #5c4033;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #5c4033;
+    }
+
+    .hero {
       text-align: center;
-      padding: 0 20px;
+      margin-top: 100px;
+      padding-bottom: 80px;
     }
 
-    h1 {
-      font-size: 4em;
-      margin-bottom: 0.2em;
-      color: #ffcc66;
+    .hero h1 {
+      font-size: 3.5em;
+      color: #3e2f21;
+      margin-bottom: 20px;
     }
 
-    p {
-      font-size: 1.5em;
+    .hero p {
+      font-size: 1.2em;
       max-width: 600px;
-      margin-bottom: 2em;
+      margin: 0 auto;
+      color: #555;
     }
 
     .btn {
-      background-color: #ffcc66;
-      color: #333;
-      padding: 12px 25px;
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 30px;
+      background-color: #5c4033;
+      color: white;
       text-decoration: none;
-      border-radius: 25px;
-      font-weight: bold;
+      border-radius: 4px;
+      font-weight: 500;
       transition: background-color 0.3s;
     }
 
     .btn:hover {
-      background-color: #ffaa00;
+      background-color: #3e2f21;
     }
 
-    footer {
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
+    /* MENU SECTION */
+    #menu {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 40px 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    #menu h2 {
       text-align: center;
-      font-size: 0.9em;
-      color: #ccc;
+      font-size: 2.5em;
+      color: #5c4033;
+      margin-bottom: 30px;
+    }
+
+    .menu-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .menu-item {
+      width: 45%;
+      margin-bottom: 25px;
+    }
+
+    .menu-item h4 {
+      margin-bottom: 5px;
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    .menu-item p {
+      color: #777;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 768px) {
+      .menu-item {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
   <div class="overlay">
-    <h1>Welcome to Cozy Cup Café</h1>
-    <p>Your neighborhood spot for freshly brewed coffee, homemade pastries, and friendly faces.</p>
-    <a href="#menu" class="btn">View Our Menu</a>
-  </div>
+    <nav>
+      <div class="logo">Minimal Café</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-  <footer>
-    &copy; 2025 Cozy Cup Café | Open Daily: 7am - 8pm
-  </footer>
+    <div class="hero">
+      <h1>Welcome to Minimal Café</h1>
+      <p>Experience the perfect cup of coffee in a calm and cozy setting. Simplicity, taste, and comfort – all in one place.</p>
+      <a href="#menu" class="btn">View Our Menu</a>
+    </div>
+
+    <!-- MENU SECTION -->
+    <section id="menu">
+      <h2>Our Menu</h2>
+      <div class="menu-section">
+        <div class="menu-item">
+          <h4>Espresso</h4>
+          <p>Strong and bold. A perfect start to your day — $2.50</p>
+        </div>
+        <div class="menu-item">
+          <h4>Americano</h4>
+          <p>Espresso with hot water. Smooth and rich — $3.00</p>
+        </div>
+        <div class="menu-item">
+          <h4>Cappuccino</h4>
+          <p>Espresso, steamed milk, and foam — $3.50</p>
+        </div>
+        <div class="menu-item">
+          <h4>Latte</h4>
+          <p>Espresso with steamed milk — $3.75</p>
+        </div>
+        <div class="menu-item">
+          <h4>Mocha</h4>
+          <p>Chocolate, espresso, and milk — $4.00</p>
+        </div>
+        <div class="menu-item">
+          <h4>Chai Latte</h4>
+          <p>Spiced tea with steamed milk — $3.50</p>
+        </div>
+        <div class="menu-item">
+          <h4>Hot Chocolate</h4>
+          <p>Rich cocoa with steamed milk — $3.25</p>
+        </div>
+        <div class="menu-item">
+          <h4>Pastries</h4>
+          <p>Fresh croissants, muffins, and cookies — $2.00 - $3.50</p>
+        </div>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
