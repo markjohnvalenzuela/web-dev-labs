@@ -2,199 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Minimal Café</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Double Brew Cafe</title>
+  <!-- Link to Sarina font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Sarina&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: 'Helvetica Neue', sans-serif;
-      color: #333;
-      background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
-      background-size: cover;
-      min-height: 100vh;
-    }
-
-    .overlay {
-      background-color: rgba(255, 255, 255, 0.85);
-      min-height: 100vh;
-      padding: 40px 20px;
-    }
-
-    nav {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #5b2205;
+      color: #eeb36a;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px 0;
-    }
-
-    nav .logo {
-      font-size: 1.8em;
-      font-weight: bold;
-      color: #5c4033;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #5c4033;
-    }
-
-    .hero {
+      height: 100vh;
       text-align: center;
-      margin-top: 100px;
-      padding-bottom: 80px;
     }
 
-    .hero h1 {
-      font-size: 3.5em;
-      color: #3e2f21;
-      margin-bottom: 20px;
+    h1 {
+      font-family: 'Sarina', cursive; /* apply Sarina here */
+      font-size: 8em;
+      margin-bottom: 0.2em;
     }
 
-    .hero p {
+    p.tagline {
       font-size: 1.2em;
       max-width: 600px;
-      margin: 0 auto;
-      color: #555;
+      margin: 0 auto 2em;
+      line-height: 1.6;
+      font-style: italic;
+      color: #efeae5;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 12px 30px;
-      background-color: #5c4033;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: 500;
-      transition: background-color 0.3s;
+    .brew-button {
+      background-color: #a25509;
+      color: #fff;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
-    .btn:hover {
-      background-color: #3e2f21;
+    .brew-button:hover {
+      background-color: #5a3f29;
     }
 
-    /* MENU SECTION */
-    #menu {
-      max-width: 900px;
-      margin: 80px auto;
-      padding: 40px 20px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-
-    #menu h2 {
-      text-align: center;
-      font-size: 2.5em;
-      color: #5c4033;
-      margin-bottom: 30px;
-    }
-
-    .menu-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .menu-item {
-      width: 45%;
-      margin-bottom: 25px;
-    }
-
-    .menu-item h4 {
-      margin-bottom: 5px;
-      font-size: 1.2em;
-      color: #333;
-    }
-
-    .menu-item p {
-      color: #777;
-      font-size: 0.95em;
-    }
-
-    @media (max-width: 768px) {
-      .menu-item {
-        width: 100%;
-      }
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9em;
+      color: #ffffff;
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <nav>
-      <div class="logo">Minimal Café</div>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
 
-    <div class="hero">
-      <h1>Welcome to Minimal Café</h1>
-      <p>Experience the perfect cup of coffee in a calm and cozy setting. Simplicity, taste, and comfort – all in one place.</p>
-      <a href="#menu" class="btn">View Our Menu</a>
-    </div>
+  <h1>Double Brew</h1>
+  <p class="tagline">Two times the brew, because once just isn’t enough for your kind of hustle.</p>
 
-    <!-- MENU SECTION -->
-    <section id="menu">
-      <h2>Our Menu</h2>
-      <div class="menu-section">
-        <div class="menu-item">
-          <h4>Espresso</h4>
-          <p>Strong and bold. A perfect start to your day — $2.50</p>
-        </div>
-        <div class="menu-item">
-          <h4>Americano</h4>
-          <p>Espresso with hot water. Smooth and rich — $3.00</p>
-        </div>
-        <div class="menu-item">
-          <h4>Cappuccino</h4>
-          <p>Espresso, steamed milk, and foam — $3.50</p>
-        </div>
-        <div class="menu-item">
-          <h4>Latte</h4>
-          <p>Espresso with steamed milk — $3.75</p>
-        </div>
-        <div class="menu-item">
-          <h4>Mocha</h4>
-          <p>Chocolate, espresso, and milk — $4.00</p>
-        </div>
-        <div class="menu-item">
-          <h4>Chai Latte</h4>
-          <p>Spiced tea with steamed milk — $3.50</p>
-        </div>
-        <div class="menu-item">
-          <h4>Hot Chocolate</h4>
-          <p>Rich cocoa with steamed milk — $3.25</p>
-        </div>
-        <div class="menu-item">
-          <h4>Pastries</h4>
-          <p>Fresh croissants, muffins, and cookies — $2.00 - $3.50</p>
-        </div>
-      </div>
-    </section>
-  </div>
+  <button class="brew-button" onclick="window.location.href='#';">Let's Brew</button>
+
 </body>
 </html>
+
