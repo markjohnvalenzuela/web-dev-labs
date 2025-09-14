@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+            background-color: #f0f8ff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: center; 
+            gap: 20px;               
+            margin-top: 40px;
+        }
+
+        .flex-box {
+            background-color: #aed581;
+            padding: 40px 20px;
+            border-radius: 10px;
+            border: 2px solid #558b2f;
+            width: 150px;
+            text-align: center;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Flexbox</h1>
+
+    <div class="flex-container">
+        <div class="flex-box">Box 1</div>
+        <div class="flex-box">Box 2</div>
+        <div class="flex-box">Box 3</div>
+    </div>
+
+</body>
+</html>
