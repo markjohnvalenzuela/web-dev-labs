@@ -1,0 +1,39 @@
+/* Custom font and text color */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    background-color: #5e2005ec;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Headings */
+h1, h2 {
+    color: #d09a2e;
+}
+
+/* Paragraphs */
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Menu list box styling */
+ul {
+    background-color: #893b06;
+    padding: 15px;
+    border: 1px solid #9a6207;
+    border-radius: 8px;
+    list-style-type: square;
+    width: fit-content;
+}
+
+/* Individual list items */
+li {
+    margin: 5px 0;
+}
+
+/* Add spacing */
+hr {
+    margin: 30px 0;
+}
