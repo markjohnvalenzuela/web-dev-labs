@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fitness Start Guide</title>
+  <style>
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#1a1a2e;
+      color:#fff;
+      overflow-x:hidden;
+    }
+    .hidden{display:none}
+    header{
+      background:#16213e;
+      padding:20px;
+      text-align:center;
+      position:relative;
+      z-index:1;
+    }
+    nav a{
+      color:#fff;
+      margin:0 10px;
+      text-decoration:none;
+    }
+    .container{
+      padding:20px;
+      max-width:800px;
+      margin:auto;
+      position:relative;
+      z-index:1;
+    }
+    .card{
+      background:#0f3460;
+      padding:15px;
+      border-radius:8px;
+      margin-bottom:15px;
+    }
+    h2,h3{margin-top:0}
+    footer{
+      text-align:center;
+      padding:10px;
+      background:#16213e;
+      font-size:14px;
+      position:relative;
+      z-index:1;
+    }
+    button{
+      padding:12px 24px;
+      border:none;
+      border-radius:6px;
+      background:#e94560;
+      color:#fff;
+      font-size:18px;
+      cursor:pointer;
+      transition:transform 0.2s ease;
+    }
+    button:hover{
+      background:#ff2e63;
+      transform:scale(1.05);
+    }
+
+    /* moving backgrounds */
+    .bg-shape{
+      position:fixed;
+      width:60px;
+      height:60px;
+      opacity:0.15;
+      animation:float 20s linear infinite;
+      z-index:0;
+    }
+    .shape1{left:10%; top:80%; background:red; border-radius:50%; animation-duration:25s;}
+    .shape2{left:50%; top:90%; background:yellow; border-radius:10%; animation-duration:30s;}
+    .shape3{left:80%; top:85%; background:lightgreen; border-radius:50%; animation-duration:35s;}
+    @keyframes float{
+      from{transform:translateY(100vh) rotate(0deg);}
+      to{transform:translateY(-120vh) rotate(360deg);}
+    }
+
+    /* simple gym equipment icons */
+    .icon{
+      position:fixed;
+      width:70px;
+      height:70px;
+      opacity:0.1;
+      z-index:0;
+    }
+    .dumbbell{
+      left:20%; top:70%;
+      animation:float 40s linear infinite;
+    }
+    .kettlebell{
+      left:65%; top:75%;
+      animation:float 45s linear infinite;
+    }
+
+    /* Welcome screen styling */
+    #welcome-screen{
+      text-align:center;
+      padding-top:100px;
+      animation:fadein 1.5s ease;
+    }
+    #welcome-screen h1{
+      font-size:2.5em;
+      margin-bottom:20px;
+      color:#ff2e63;
+    }
+    #welcome-screen p{
+      font-size:1.2em;
+      margin-bottom:30px;
+    }
+    .motivation{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+    .motivation .tip{
+      background:#0f3460;
+      padding:15px;
+      border-radius:8px;
+      width:200px;
+      font-size:0.95em;
+      box-shadow:0 4px 10px rgba(0,0,0,0.4);
+      transition:transform 0.3s;
+    }
+    .motivation .tip:hover{
+      transform:translateY(-5px);
+    }
+    @keyframes fadein{
+      from{opacity:0; transform:translateY(20px);}
+      to{opacity:1; transform:translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <!-- Moving background shapes -->
+  <div class="bg-shape shape1"></div>
+  <div class="bg-shape shape2"></div>
+  <div class="bg-shape shape3"></div>
+
+  <!-- Gym equipment SVGs -->
+  <svg class="icon dumbbell" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <rect x="2" y="22" width="12" height="20" fill="white" />
+    <rect x="50" y="22" width="12" height="20" fill="white" />
+    <rect x="16" y="26" width="32" height="12" fill="white" />
+  </svg>
+
+  <svg class="icon kettlebell" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="32" cy="36" r="20" fill="white" />
+    <rect x="22" y="10" width="20" height="12" rx="6" fill="white" />
+  </svg>
+
+  <!-- Opening screen -->
+  <div id="welcome-screen" class="container">
+    <h1>Welcome to Fitness Starter Guide</h1>
+    <p>Your journey begins today! Build strength, stay healthy, and work out every day with motivation.</p>
+    <button onclick="startGuide()">Start My Fitness Journey</button>
+
+    <div class="motivation">
+      <div class="tip">💪 Stay consistent – small progress adds up.</div>
+      <div class="tip">🥗 Fuel your body with good food.</div>
+      <div class="tip">🕒 Make time for at least 20 minutes daily.</div>
+      <div class="tip">😴 Rest is part of growth too.</div>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div id="main-content" class="hidden">
+    <header>
+      <h1>Fitness Start Guide</h1>
+      <p>Beginner friendly fitness plan</p>
+      <nav>
+        <a href="#plan">Plan</a>
+        <a href="#workouts">Workouts</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div id="plan" class="card">
+        <h2>30-Day Starter Plan</h2>
+        <ul>
+          <li>Weeks 1–2: 3 workouts per week</li>
+          <li>Weeks 3–4: 4 workouts per week</li>
+          <li>Focus on consistency</li>
+        </ul>
+      </div>
+
+      <div id="workouts" class="card">
+        <h2>Beginner Workouts</h2>
+        <h3>Workout A</h3>
+        <ul>
+          <li>Bodyweight squats – 10</li>
+          <li>Push-ups – 8</li>
+          <li>Plank – 30s</li>
+        </ul>
+        <h3>Workout B </h3>
+        <ul>
+          <li>Jog – 5 min</li>
+          <li>Jumping jacks – 45s</li>
+          <li>Stretch – 2 min</li>
+        </ul>
+      </div>
+
+      <div id="nutrition" class="card">
+        <h2>Nutrition Tips</h2>
+        <ul>
+          <li>Eat protein each meal</li>
+          <li>Add vegetables and fruits</li>
+          <li>Drink enough water</li>
+          <li>Get enough sleep</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>Made for beginners • Not medical advice</p>
+    </footer>
+  </div>
+
+  <script>
+    function startGuide(){
+      document.getElementById('welcome-screen').style.display='none';
+      document.getElementById('main-content').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
