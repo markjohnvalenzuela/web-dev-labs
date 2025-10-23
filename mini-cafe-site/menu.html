@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Café Menu</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fafafa;
+      color: #333;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #3b3b3b;
+    }
+
+    .menu-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .menu-item {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .menu-item:hover {
+      transform: scale(1.03);
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .menu-item h3 {
+      margin-bottom: 5px;
+      color: #2a2a2a;
+    }
+
+    .menu-item p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #00704a;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 768px) {
+      .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .menu-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Mini Café Menu</h1>
+  <div class="menu-container">
+    <div class="menu-item">
+      <img src="https://via.placeholder.com/300x180?text=Coffee" alt="Coffee">
+      <h3>Coffee</h3>
+      <p>Freshly brewed hot coffee made from premium beans.</p>
+      <span class="price">$2.50</span>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://via.placeholder.com/300x180?text=Tea" alt="Tea">
+      <h3>Tea</h3>
+      <p>Refreshing green and black tea varieties to choose from.</p>
+      <span class="price">$2.00</span>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://via.placeholder.com/300x180?text=Pastries" alt="Pastries">
+      <h3>Pastries</h3>
+      <p>Delicious croissants, muffins, and tarts baked daily.</p>
+      <span class="price">$3.00</span>
+    </div>
+  </div>
+</body>
+</html>
