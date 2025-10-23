@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 5 - Flexible Two-Column Layout</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      background-color: #222;
+      color: white;
+      padding: 20px 0;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .section img {
+      width: 100%;
+      height: auto;
+    }
+
+    .text {
+      padding: 20px;
+    }
+
+    .text h2 {
+      margin-top: 0;
+      color: #444;
+    }
+
+    .text p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* Desktop: side-by-side layout */
+    @media (min-width: 768px) {
+      .section {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .section:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .section img {
+        width: 50%;
+      }
+
+      .text {
+        width: 50%;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      background-color: #222;
+      color: #bbb;
+      font-size: 0.9rem;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Activity 5: Flexible Two-Column Layout</header>
+
+  <div class="container">
+
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Coffee">
+      <div class="text">
+        <h2>Freshly Brewed Coffee</h2>
+        <p>Enjoy the rich aroma and bold flavor of freshly brewed coffee made from high-quality roasted beans — a perfect start to your day.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03" alt="Pastries">
+      <div class="text">
+        <h2>Delicious Pastries</h2>
+        <p>Our pastries are baked fresh every morning, combining buttery goodness and delicate sweetness for an unforgettable treat.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 Simple Two-Column Layout | Designed by [Your Name]
+  </footer>
+
+</body>
+</html>
