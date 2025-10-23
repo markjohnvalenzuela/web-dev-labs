@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 3: Media Queries</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== Base Layout ===== */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #2b5876, #4e4376);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      color: #a5f3fc;
+      margin-bottom: 15px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px;
+      width: 90%;
+      max-width: 700px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    h2 {
+      color: #fcd34d;
+      margin-bottom: 10px;
+    }
+
+    .code-box {
+      background-color: #1e293b;
+      text-align: left;
+      border-radius: 10px;
+      padding: 20px;
+      font-family: 'Source Code Pro', monospace;
+      color: #a5f3fc;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      border-left: 5px solid #38bdf8;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #e2e8f0;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>ACTIVITY 3: Fill-in-the-Blanks</h1>
+    <h2>Media Queries</h2>
+
+    <div class="code-box">
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+    </div>
+
+    <p><strong>Task:</strong> Complete the missing CSS code for media queries and apply them correctly.</p>
+  </div>
+
+</body>
+</html>
