@@ -17,7 +17,7 @@
       overflow: hidden;
     }
 
-    /* Layout Grid */
+    
     .layout {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
@@ -25,7 +25,7 @@
       height: 100%;
     }
 
-    /* Left Panel */
+   
     .left-panel {
       position: relative;
       background: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80")
@@ -61,7 +61,7 @@
       margin-bottom: 1rem;
     }
 
-    /* Right Panel */
+    
     .right-panel {
       background: #fffdf8;
       display: flex;
@@ -92,7 +92,7 @@
       margin-bottom: 1.5rem;
     }
 
-    /* Buttons */
+   
     .btn {
       border: none;
       border-radius: 25px;
@@ -135,7 +135,7 @@
       background-color: #ffa726;
     }
 
-    /* Alerts */
+  
     .alert {
       display: none;
       border: none;
@@ -185,7 +185,7 @@
       margin-top: 1.5rem;
     }
 
-    /* Responsive */
+
     @media (max-width: 900px) {
       .layout {
         grid-template-columns: 1fr;
@@ -206,7 +206,7 @@
 </head>
 <body>
   <div class="layout">
-    <!-- Left side -->
+
     <div class="left-panel">
       <div class="overlay"></div>
       <h1>☕ Bon Aparteá Café</h1>
@@ -214,20 +214,20 @@
       <footer>Established 2025 — Handcrafted Moments in Every Cup</footer>
     </div>
 
-    <!-- Right side -->
+  
     <div class="right-panel">
       <div class="card-panel">
         <h2>Interactive Brews</h2>
         <p>Choose your blend below and let our digital barista respond!</p>
 
-        <!-- Buttons -->
+ 
         <div>
           <button id="successBtn" class="btn btn-primary">Golden Roast</button>
           <button id="errorBtn" class="btn btn-secondary">Bitter Shot</button>
           <button id="warningBtn" class="btn btn-warning">Steamy Alert</button>
         </div>
 
-        <!-- Alerts -->
+        
         <div id="successAlert" class="alert alert-success">
           <span class="emoji">🌸</span> Perfect balance achieved — your brew is golden and smooth!
         </div>
@@ -259,7 +259,7 @@
       });
       alertElement.style.display = "block";
       alertElement.style.animation = "none";
-      alertElement.offsetHeight; // trigger reflow
+      alertElement.offsetHeight; 
       alertElement.style.animation = "fadeSlide 0.6s ease forwards";
     }
 
