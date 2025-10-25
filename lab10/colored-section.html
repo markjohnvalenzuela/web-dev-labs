@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 5 - Colored Sections with Utilities (Redesigned)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #f5f2ef, #e8dfd4);
+      font-family: "Poppins", sans-serif;
+      color: #333;
+    }
+
+    h2 {
+      font-weight: 700;
+    }
+
+    /* Custom Section Styling */
+    section {
+      border-radius: 20px;
+      padding: 60px 20px;
+      margin: 40px auto;
+      max-width: 900px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    /* New Color Palette */
+    .bg-ocean {
+      background: linear-gradient(135deg, #4ea699, #2c7a7b);
+      color: #fff;
+    }
+
+    .bg-sunset {
+      background: linear-gradient(135deg, #f7a072, #ee786e);
+      color: #fff;
+    }
+
+    .bg-mocha {
+      background: linear-gradient(135deg, #b89876, #7b5e57);
+      color: #fff;
+    }
+
+    code {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 2px 6px;
+      border-radius: 5px;
+      color: #fff3cd;
+    }
+
+    footer {
+      margin-top: 60px;
+      color: #6c757d;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body class="text-center">
+
+  <!-- Ocean Section -->
+  <section class="bg-ocean">
+    <div class="container">
+      <h2>Ocean Section</h2>
+      <p>This section uses a calm blue-green gradient for a relaxing tone.</p>
+    </div>
+  </section>
+
+  <!-- Sunset Section -->
+  <section class="bg-sunset">
+    <div class="container">
+      <h2>Sunset Section</h2>
+      <p>This section uses a warm coral gradient to bring energy and brightness.</p>
+    </div>
+  </section>
+
+  <!-- Mocha Section -->
+  <section class="bg-mocha">
+    <div class="container">
+      <h2>Mocha Section</h2>
+      <p>This section uses an earthy brown gradient for a cozy and grounded feel.</p>
+    </div>
+  </section>
+
+  <footer class="text-center mt-5">
+    <small>Activity 5: Redesigned Colored Sections with Utilities</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
