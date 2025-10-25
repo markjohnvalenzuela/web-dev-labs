@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Double Brew Café – East Zamora, Pandacan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --deep-espresso: #3c2a21;
+      --latte-cream: #f5ede0;
+      --soft-beige: #c8a97e;
+      --mocha: #8d6e63;
+    }
+
+    body {
+      background-color: var(--latte-cream);
+      color: var(--deep-espresso);
+      font-family: "Poppins", sans-serif;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--deep-espresso), var(--mocha));
+      color: #fff;
+      text-align: center;
+      padding: 5rem 1rem 3rem;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+
+    header h1 {
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      opacity: 0.9;
+      font-size: 1.1rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .btn-cta {
+      background: var(--soft-beige);
+      border: none;
+      color: #fff;
+      padding: 0.75rem 1.8rem;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-cta:hover {
+      background: var(--mocha);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .feature {
+      padding: 2rem 1.5rem;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature h4 {
+      color: var(--mocha);
+      font-weight: 600;
+    }
+
+    section#menu {
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 4rem 1rem;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+    }
+
+    .card {
+      border: none;
+      background: var(--latte-cream);
+      border-radius: 14px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      border-top-left-radius: 14px;
+      border-top-right-radius: 14px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: var(--deep-espresso);
+      color: #e0d4c3;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 4px solid var(--soft-beige);
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Double Brew Café</h1>
+    <p>“At Double Brew, we believe coffee is more than just a drink — it’s fuel for passion, goals, and everyday life.”</p>
+    <a href="#menu" class="btn-cta">Explore Our Menu</a>
+  </header>
+
+  <div class="container">
+
+    <!-- WHY VISIT US -->
+    <h2 class="text-center my-5 fw-bold">Why Visit Us?</h2>
+    <div class="row g-4">
+      <div class="col-12 col-md-4">
+        <div class="feature text-center">
+          <h4>Crafted Coffee</h4>
+          <p>Our espresso and brews are made from premium beans for that perfect balance of aroma and flavor.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="feature text-center">
+          <h4>Warm Ambience</h4>
+          <p>Enjoy a cozy and welcoming atmosphere — ideal for study, work, or catching up with friends.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="feature text-center">
+          <h4>Freshly Made</h4>
+          <p>Our pastries, milk teas, and desserts are prepared daily to ensure every bite is fresh and satisfying.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- OUR SPECIALTIES -->
+    <section id="menu" class="text-center my-5">
+      <h2 class="mb-4 fw-bold">Our Specialties</h2>
+      <div class="row g-4">
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100">
+            <img src="image/coffee.jpg" class="card-img-top" alt="Espresso">
+            <div class="card-body">
+              <h5 class="card-title">Espresso & Americano</h5>
+              <p class="card-text">Bold, rich, and smooth — perfect for true coffee lovers.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100">
+            <img src="image/latte.jpg" class="card-img-top" alt="Latte">
+            <div class="card-body">
+              <h5 class="card-title">Cappuccino & Latte</h5>
+              <p class="card-text">Available in vanilla, caramel, and hazelnut flavors — crafted to perfection.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100">
+            <img src="image/mocha.jpg" class="card-img-top" alt="Mocha">
+            <div class="card-body">
+              <h5 class="card-title">Mocha Bliss</h5>
+              <p class="card-text">A rich mix of coffee and chocolate that warms your heart.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100">
+            <img src="image/shop.jpg" class="card-img-top" alt="Cafe Interior">
+            <div class="card-body">
+              <h5 class="card-title">Perfect Hangout</h5>
+              <p class="card-text">A relaxing spot to sip, study, or share stories over a good brew.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="text-center my-5">
+      <h2 class="mb-4 fw-bold">Contact</h2>
+      <div class="mx-auto" style="max-width: 500px;">
+        <p><strong>Email:</strong> doublebrew@example.com</p>
+        <p><strong>Phone:</strong> 0912-345-6789</p>
+        <p><strong>Address:</strong> Double Brew Café, 123 Coffee Street, Bean City</p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Double Brew Café • East Zamora St., Pandacan • Phone: 0912-345-6789
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
