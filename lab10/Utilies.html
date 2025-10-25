@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Utility Playground</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #f6f1f1, #d9e4ec);
+      font-family: "Poppins", sans-serif;
+      color: #2f2f2f;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      color: #394867;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 50px;
+      position: relative;
+      display: inline-block;
+    }
+
+    h1::after {
+      content: "";
+      display: block;
+      width: 80%;
+      height: 3px;
+      background: #9bb4d1;
+      margin: 8px auto 0;
+      border-radius: 5px;
+    }
+
+    .custom-box {
+      background: linear-gradient(135deg, #a3cef1, #7393b3);
+      color: #1e1e1e;
+      padding: 35px;
+      border-radius: 18px;
+      border-left: 6px solid #557a95;
+      border-right: 6px solid #557a95;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .custom-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    code {
+      background: rgba(255,255,255,0.3);
+      color: #1e1e1e;
+      border-radius: 5px;
+      padding: 2px 6px;
+      font-weight: 600;
+    }
+
+    .text-line {
+      color: #fff;
+      background: linear-gradient(135deg, #6a9c89, #557a95);
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-style: italic;
+      margin-top: 40px;
+      border-left: 6px solid #394867;
+      border-right: 6px solid #394867;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body class="text-center">
+
+  <h1>Bootstrap Utility Playground</h1>
+
+  <div class="custom-box mb-4 mx-auto" style="max-width: 700px;">
+    <p>This is a colored box using <code>bg-primary</code>, <code>p-4</code>, and <code>mb-3</code>.</p>
+  </div>
+
+  <p class="d-none d-md-block text-line">
+    Gumigiling yung babae pababa, pababa nang pababa nang pababa
+  </p>
+
+</body>
+</html>
