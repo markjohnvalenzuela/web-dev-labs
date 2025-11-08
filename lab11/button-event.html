@@ -3,14 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Button Alert</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Button Event</title>
 </head>
-<body>
-  <div class="container">
-    <h1>Interactive Button</h1>
-    <p>Press the button below to trigger an alert message.</p>
-    <button onclick="alert('Thanks for clicking!')">Click Me 🚀</button>
-  </div>
+<body style="background: linear-gradient(135deg, #8360c3, #2ebf91); color:#fff; font-family:Arial, sans-serif; display:flex; flex-direction:column; justify-content:center; align-items:center; height:100vh; text-align:center;">
+
+  <h1 style="color:#ffeaa7; text-shadow: 0 0 10px rgba(255,255,255,0.5);">
+    JavaScript Syntax
+  </h1>
+
+  <p style="max-width:400px; color:#f1f2f6;">
+    Click the button below to see a special alert message!
+  </p>
+  
+  <button onclick="alert('💜 You clicked the button! 💜')" 
+          style="background-color:#ff6b81; border:none; padding:12px 30px; border-radius:30px; color:#fff; font-weight:bold; font-size:1rem; cursor:pointer; margin-top:25px; box-shadow:0 4px 10px rgba(0,0,0,0.3); transition: all 0.3s;">
+    Click Me
+  </button>
+
+  <script>
+    const btn = document.querySelector("button");
+    btn.addEventListener("mouseover", () => btn.style.backgroundColor = "#ff4757");
+    btn.addEventListener("mouseout", () => btn.style.backgroundColor = "#ff6b81");
+  </script>
 </body>
 </html>
