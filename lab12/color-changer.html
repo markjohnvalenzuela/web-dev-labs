@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Color Switcher</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+      background: #add8e6; /* Light Blue */
+      transition: 0.5s;
+    }
+    h2 {
+      color: #222; 
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px #fff;
+    }
+    select, button {
+      padding: 12px 18px;
+      margin: 5px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    }
+    select {
+      background: #fff;
+      color: #333;
+    }
+    button {
+      background: #6a82fb;
+      color: #fff;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #4e64d4;
+    }
+  </style>
+</head>
+<body>
+  <h2>🎨 Pick Your Background Color</h2>
+  <select id="color">
+    <option value="#add8e6">Light Blue</option>
+    <option value="#ffe5ec">Soft Pink</option>
+    <option value="#d4ffd4">Mint Green</option>
+    <option value="#fff3b0">Sunny Yellow</option>
+  </select>
+  <button onclick="document.body.style.backgroundColor=color.value">Change</button>
+</body>
+</html>
